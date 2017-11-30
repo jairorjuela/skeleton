@@ -1,0 +1,21 @@
+<h1> EDITANDO </h1>
+<% if @errors %>
+<ul>
+  <% @errors.each do |error| %>     <!--este bloque muestra los errores si los hay -->
+  <li><%= error %></li>
+    <% error %>
+        <%end%>
+  </ul>
+  <%end%>
+
+
+
+
+<form action="/notes/<%= @note.id %>" method="post">
+  <input type="hidden" name="_method" value="PATCH"><!--este es un hack porque los navegadores no
+                                                reconocen el patch, put, delete, por eso va oculto, es para que
+                                                sinatra lo reconozca--->
+<input type="text" name="name_student" value="<%= @name_student%>">
+<input type="numer" name="student" value="<%= @student%>">
+<input type="submit" value="Estudiante Editado">
+</form>

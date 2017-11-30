@@ -1,0 +1,34 @@
+<h1>Datos Estudiante</h1>
+
+<% if @errors %>
+<ul>
+  <% @errors.each do |error| %>     <!--este bloque muestra los errores si los hay -->
+  <li><%= error %></li>
+    <% error %>
+  </ul>
+<% end %>
+<% end %>
+
+
+<form action="/notes" method="POST">
+<input type="text" name="name_student">
+<input type="number" name="student">
+<input type="submit" value="crear Estudiante">
+</form>
+
+
+<h1>Mi cuenta es: <span id="clicks">0</span></h1>
+
+
+<!-- Contador de clicks
+<input onclick="javascript:clickLink();" type="submit" value="Suma!!">
+<p>Clicks <span id="clicks">0</span></p>
+<a href="javascript:Reset();">Reset</a>
+<a href="javascript:clickLink();">Suma!!</a> -->
+
+
+
+#new
+get '/entries/new' do
+  erb :"/entries/new"
+end

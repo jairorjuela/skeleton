@@ -1,0 +1,13 @@
+<h1> Notas de  <%= @note.name_student %> </h1>
+<p> el estudiante <%= @note.name_student %>, es del grupo <%= @note.group %>, su calificación es de <%= @note.score %>
+
+
+<form action="/notes/<%= @note.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="Borrar Registro del Estudiante">
+</form>
+
+
+<a href="/notes"> Ve a la tabla de notas</a>
+
+<a href="/notes/<%= @note.id %>/edit">Edita Estudiante</a>
