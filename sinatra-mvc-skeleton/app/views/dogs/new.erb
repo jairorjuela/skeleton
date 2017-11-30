@@ -1,0 +1,19 @@
+<h1>Datos Perro</h1>
+
+<% if @errors %>
+<ul>
+  <% @errors.each do |error| %>     <!--este bloque muestra los errores si los hay -->
+  <li><%= error %></li>
+    <% error %>
+  </ul>
+  <%end%>
+
+
+
+
+
+<form action="/dogs" method="POST">
+<input type="text" name="name">
+<input type="numer" name="age">
+<input type="submit" value="crear perro">
+</form>

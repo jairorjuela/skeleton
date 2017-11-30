@@ -1,0 +1,9 @@
+<h1> Todos los perros</h1>
+
+<ul>
+  <% @dogs.each do |dog| %>  <!-- este bloque es el que se llama en dog_controler con Dog.all -->
+  <li><a href="/dogs/<%=dog.id%>"><%= dog.name %></a></li>
+  <%= end %>
+</ul>
+
+<a href="/dogs/new">Crea perro</a>

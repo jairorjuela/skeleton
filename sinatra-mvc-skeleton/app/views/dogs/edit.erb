@@ -1,0 +1,21 @@
+<h1>Edita Perro</h1>
+
+
+<% if @errors %>
+<ul>
+  <% @errors.each do |error| %>     <!--este bloque muestra los errores si los hay -->
+  <li><%= error %></li>
+    <% error %>
+  </ul>
+  <%end%>
+
+
+
+<form action="/dogs/<%= @dog.id %>" method="post">
+  <input type="hidden" name="_method" value="PATCH"><!--este es un hack porque los navegadores no
+                                                reconocen el patch, put, delete, por eso va oculto, es para que
+                                                sinatra lo reconozca--->
+<input type="text" name="name" value="<%= @dog.name%>">
+<input type="numer" name="age" value=" @dog.age%>">
+<input type="submit" value="evoluciona perro">
+</form>
